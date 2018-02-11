@@ -1,16 +1,18 @@
 /**
  * @author shipSun
  */
-function successHandle(data){
-	$.restful.isLoginHandle(data);
-	$.restful.success(data);
-}
 function RestFul(){
 	this.type="get";
 	this.url="";
 	this.data="";
 	this.async=true;
 	this.debug = false;
+
+	var restful = this;
+    function successHandle(data){
+        restful.isLoginHandle(data);
+        restful.success(data);
+    }
 
 	this.ajax=function(){
 		$.ajax({
