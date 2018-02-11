@@ -67,7 +67,7 @@ OssSdk.prototype.download = function(){
     urlA.appendTo($("body"));
     $(function () {
         $("#downBtn").trigger("click");
-        $("#downA").remove()
+        $("#downA").remove();
     });
 }
 OssSdk.prototype.sourceFileName = function(){
