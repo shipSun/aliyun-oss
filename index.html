@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="jquery.min.js"></script>
+<script src="restful.js"></script>
+<script src="aliyun-oss-sdk.js"></script>
+<script src="oss-sdk.js"></script>
+<input type="file" id="file" multiple="multiple"/>
+<script>
+    var testOssSdk = new OssSdk().init('http://www.ship.com/upload/token.php');
+    $('#file').on('change',function(){
+        var file = $('#file')[0].files;
+        console.log(file);
+        testOssSdk.upload(file);
+    });
+</script>
+
+</body>
+</html>
